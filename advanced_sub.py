@@ -8,16 +8,16 @@
 # aZc   ---> a!Z!c
 # aZZc  ---> a!Z!!Z!c
 # aBaCa ---> a!B!a!C!a
-REGEXP_1 = ''   # регулярное выражение
-REGEXP_1_REPL = '' # выражение для строки замены
+REGEXP_1 = '(A|Z|B|C)'   # регулярное выражение
+REGEXP_1_REPL = r'!\1!' # выражение для строки замены
 
 # abc    ---> abc
 # abbc   ---> abc
 # azzzc  ---> azc
 # arrrrc ---> arc
 # xxxxxx ---> x
-REGEXP_2 = '' 
-REGEXP_2_REPL = ''
+REGEXP_2 = '(b+|z+|r+|x+)'
+REGEXP_2_REPL = r'\1'
 
 # this is text         ---> this is text
 # this is is text      ---> this *is* text
